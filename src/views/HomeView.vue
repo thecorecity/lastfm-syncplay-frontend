@@ -56,7 +56,7 @@ function connect() {
     <v-card max-width="800px" class="mx-auto my-2">
       <v-card-title>Rooms Browser</v-card-title>
       <v-card-actions>
-        <v-btn color="primary">Create Room</v-btn>
+        <v-btn color="primary" :disabled="!isLoggedIn" to="/room/new">Create Room</v-btn>
       </v-card-actions>
     </v-card>
   </div>

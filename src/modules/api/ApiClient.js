@@ -1,5 +1,5 @@
-import MessageParser from "./MessageParser";
-import BaseMessage from "./base/BaseMessage";
+import MessageParser from "@/modules/api/MessageParser";
+import BaseMessage from "@/modules/api/base/BaseMessage";
 
 export default class ApiClient {
   /** @type {WebSocket|null} */
@@ -75,8 +75,8 @@ export default class ApiClient {
   }
 
   /**
-   * @template {keyof MessageTypesMap | string} TypeName
-   * @param {TypeName} type
+   * @template {keyof MessageTypesMap} TypeName
+   * @param {TypeName|string} type
    * @param {(event: CustomEvent<MessageTypesMap[TypeName]>) => *} callback
    */
   onMessage(type, callback) {

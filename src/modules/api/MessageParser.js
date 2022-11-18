@@ -1,8 +1,10 @@
-import UserAuthMessage from "./messages/in/UserAuthMessage";
+import UserAuthMessage from "@/modules/api/messages/in/UserAuthMessage";
+import RoomCreatedMessage from "@/modules/api/messages/in/RoomCreatedMessage";
 
 
 export const MessageTypes = {
-  hello: UserAuthMessage
+  hello: UserAuthMessage,
+  roomCreated: RoomCreatedMessage
 }
 
 export default class MessageParser {

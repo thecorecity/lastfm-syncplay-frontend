@@ -15,4 +15,8 @@ export default class BaseMessage {
   get payload() {
     return this._payload;
   }
+
+  toString() {
+    return JSON.stringify(this._payload);
+  }
 }
